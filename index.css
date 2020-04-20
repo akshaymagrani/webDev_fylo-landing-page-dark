@@ -40,14 +40,14 @@ body{
     padding-top: 2em;
     background-color: var(--introBackground);
 }
-.div1,.div2,.div3,.div4,.div5 {
+h1,h2,button{
+    font-family: 'Raleway', sans-serif;
+}
+.div1,.div3,.div4,.div5 {
     padding-top:2em;
 }
 a{
     color:white;
-}
-div{
-    padding: 1em 0.5em 0 0.5em;
 }
 .div1{
     background-color: var(--introBackground);
@@ -55,7 +55,7 @@ div{
     z-index: 1;
 }
 .div1 > h1,p{
-    padding-top: 2rem;
+    padding-top: 1rem;
     max-width: 775px;
     margin: 0 auto;
 }
@@ -74,11 +74,20 @@ div{
     padding:0.8em;
     margin:2em 0;
 }
+.button1{
+    max-width: 375px;
+}
 .f-works{
     color:var(--Cyan);
     border-bottom: 1px solid cyan;
     margin:1em 0;
     padding:0.5em 0;
+}
+.div3-content > p{
+    margin-bottom: 1em;
+}
+.div3-content{
+    margin-bottom: 2em;
 }
 .bg-image-desktop{
     display: none;
@@ -97,6 +106,7 @@ p{
 }
 .div4{
     position: relative;
+
 }
 .bg-quotes{
     max-height:40px;
@@ -111,16 +121,21 @@ p{
     padding:1em;
     border-radius: 5px;
 }
+.div2, .div3, .div4, .div5{
+    margin: 1em;
+}
 .div5{
     background-color: var(--testimonialsBackground);
     margin: 1em;
     padding: 1em;
     position: relative;
     top: 120px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px black;
 }
 .div-footer{
     background-color: var(--footerBackground);
-    padding-top: 8em;
+    padding-top: 10em;
     width: 100%;
 }
 .div-footer-icon{
@@ -138,10 +153,11 @@ i{
     height:20px;
     border: 1px solid white;
     border-radius: 50%;
-    padding:10px;
+    padding:1em;
     margin: 1em;
+    vertical-align: middle;
 }
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin: 2em;}
 .attribution a { color: hsl(228, 45%, 44%); }
 
 @media screen and (min-width:775px) {
@@ -152,14 +168,38 @@ i{
         width:100%;
         display: block;
         position: relative;
-        height: 400px;
+        height: 600px;
         z-index: -1;
+        bottom: 200px;
     }
-    div{
-        padding: 1em 0 0;
+    .div1{
+        padding-bottom: 20em;
+    }
+    .div1 > p{
+        max-width: 500px;
+    }
+    .div1::before{
+        position: absolute;
+        bottom: 0;
+        content:"";
+        display: block;
+        width:100%;
+        background-image: url("images/bg-curvy-desktop.svg");
+        background-repeat: no-repeat;
+        height: 500px;
+        background-position: bottom;
+        background-size: contain;
+        background-origin: content-box, padding-box;
+        mix-blend-mode: normal;
+        object-fit: cover;
+        z-index: -1;
+        background-position: right bottom;
     }
     .button1{
-        margin-top: 2rem;
+        width: 20%;
+    }
+    .button2{
+        width: 30%;
     }
     .div3, .div4{
         max-width: 1445px;
@@ -174,7 +214,9 @@ i{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         max-width: 1445px;
-        margin:3em auto;
+        margin:0 auto;
+        position: relative;
+
     }
     .div2-1{
         grid-row: 1/2;
@@ -221,7 +263,6 @@ i{
     }
     .button{
         display: inline-block;
-        width:30%;
         margin:2em 1em;
     }
     .div-footer-flex{
@@ -244,5 +285,8 @@ i{
     }
     .media-body{
         padding: 0 1em;
+    }
+    .div-footer{
+        padding: 6em; 
     }
 }
