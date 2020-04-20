@@ -1,0 +1,248 @@
+/*
+Dark Blue (intro and email sign up background): hsl(217, 28%, 15%)
+Dark Blue (main background): hsl(218, 28%, 13%)
+Dark Blue (footer background): hsl(216, 53%, 9%)
+Dark Blue (testimonials background): hsl(219, 30%, 18%)
+Accent
+Cyan (inside call-to-action gradient): hsl(176, 68%, 64%)
+Blue (inside call-to-action gradient): hsl(198, 60%, 50%)
+Neutral
+White: hsl(0, 0%, 100%)
+
+font-family: 'Raleway', sans-serif;
+
+font-family: 'Open Sans', sans-serif;
+
+*/
+:root{
+    --introBackground: hsl(217, 28%, 15%);
+    --mainBackground: hsl(218, 28%, 13%);
+    --footerBackground: hsl(216, 53%, 9%);
+    --testimonialsBackground: hsl(219, 30%, 18%);
+
+    --Cyan : hsl(176, 68%, 64%);
+    --Blue : hsl(198, 60%, 50%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+body{
+    background-color: var(--mainBackground);
+}
+.main{
+    margin:0 auto;
+}
+.container-fluid{
+    padding-top: 2em;
+    background-color: var(--introBackground);
+}
+.div1,.div2,.div3,.div4,.div5 {
+    padding-top:2em;
+}
+a{
+    color:white;
+}
+div{
+    padding: 1em 0.5em 0 0.5em;
+}
+.div1{
+    background-color: var(--introBackground);
+    position: relative;
+    z-index: 1;
+}
+.div1 > h1,p{
+    padding-top: 2rem;
+    max-width: 775px;
+    margin: 0 auto;
+}
+.div2-icon{
+    margin:3em 0 1em;
+}
+.productive{
+    width:100%;
+    margin: auto;
+}
+.button{
+    width:100%;
+    background-image: linear-gradient(90deg,var(--Cyan),var(--Blue));
+    border-radius: 25px;
+    border:none;
+    padding:0.8em;
+    margin:2em 0;
+}
+.f-works{
+    color:var(--Cyan);
+    border-bottom: 1px solid cyan;
+    margin:1em 0;
+    padding:0.5em 0;
+}
+.bg-image-desktop{
+    display: none;
+}
+.bg-image-mobile{
+    width: 100%;
+}
+.fylo-logo{
+    transform: scale(0.8);
+}
+li{
+    font-size: 14px;
+}
+p{
+    font-size: 14px;
+}
+.div4{
+    position: relative;
+}
+.bg-quotes{
+    max-height:40px;
+    position:absolute;
+    z-index:-1;
+    left:5px;
+    top:20px;
+}
+.comments{
+    background-color: var(--testimonialsBackground);
+    margin:1em;
+    padding:1em;
+    border-radius: 5px;
+}
+.div5{
+    background-color: var(--testimonialsBackground);
+    margin: 1em;
+    padding: 1em;
+    position: relative;
+    top: 120px;
+}
+.div-footer{
+    background-color: var(--footerBackground);
+    padding-top: 8em;
+    width: 100%;
+}
+.div-footer-icon{
+    margin: 0 auto;
+}
+.email{
+    display: block;
+    width: 100%;
+    margin: 1em 0;
+    border-radius: 25px;
+    padding:0.7em;
+}
+i{
+    width:20px;
+    height:20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding:10px;
+    margin: 1em;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width:775px) {
+    .bg-image-mobile{
+        display: none;
+    }
+    .bg-image-desktop{
+        width:100%;
+        display: block;
+        position: relative;
+        height: 400px;
+        z-index: -1;
+    }
+    div{
+        padding: 1em 0 0;
+    }
+    .button1{
+        margin-top: 2rem;
+    }
+    .div3, .div4{
+        max-width: 1445px;
+        margin:3em auto;
+        display: flex;
+    }
+    .div-footer{
+        margin: 2em 0;
+    }
+    .div2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        max-width: 1445px;
+        margin:3em auto;
+    }
+    .div2-1{
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .div2-2{
+        grid-row: 1/2;
+        grid-column: 2/3;
+    }
+    .div2-3{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .div2-4{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .div2-1, .div2-2, .div2-3, .div2-4{
+        max-width: 400px;
+        margin: auto;
+    }
+    .div3-content{
+        align-self: center;
+        padding-left: 4em;
+        max-width: 600px;
+    }
+    .div5{
+        background-color: var(--testimonialsBackground);
+        width:50%;
+        margin: 0 auto;
+        padding: 1em;
+        position: relative;
+        top: 120px;
+        max-width: 1445px;
+        margin:3em auto;
+    }
+    .div-buttons{
+        display: flex;
+    }
+    .email{
+        display: inline-block;
+        width: 60%;
+        margin: 2em 1em;
+    }
+    .button{
+        display: inline-block;
+        width:30%;
+        margin:2em 1em;
+    }
+    .div-footer-flex{
+        display: flex;
+        justify-content:space-between;
+    }
+    .div-footer-flex > p{
+        padding-top:0;
+    }
+    .div-footer-add{
+        display: flex;
+        width:50%;
+    }
+    .f-li1, .f-li2{
+        width: 12%;
+    }
+    .div-f-add{
+        padding-top:0;
+        width: 50%;
+    }
+    .media-body{
+        padding: 0 1em;
+    }
+}
